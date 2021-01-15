@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="../assets/favicon.ico" />
+		<title>One Zero Todo App</title>
+		<link rel="stylesheet" href="../assets/styles.css" />
+	</head>
+	<body>
+		<div id="todo-table">
+			<h1>Todo App</h1>
+			<form name="todoForm" action="/todo" method="POST" onsubmit="return validateForm()">
+				<input type="text" name="task" autofocus placeholder="Add new task..." />
+				<button type="submit">Add</button>
+			</form>
+			<ul>
+				<% todo.map(item => { %>
+				<li><%= item %></li>
+				<% }) %>
+			</ul>
+		</div>
+		<script src="../assets/client.js"></script>
+	</body>
+</html>
